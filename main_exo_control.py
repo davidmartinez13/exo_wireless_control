@@ -35,7 +35,8 @@ def move_exoskeleton(ec):
                     json.dump(request_data,f)
                 done = True
 
-    ec.pwm.stop()
+    ec.pwm1.stop()
+    ec.pwm2.stop()
     GPIO.cleanup()
         
 

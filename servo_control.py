@@ -16,7 +16,7 @@ class ExoskeletonControl():
         duty1 = angle1 / 18 + 2
         GPIO.output(11, True)
         self.pwm1.ChangeDutyCycle(duty1)
-        sleep(0.3)
+        sleep(0.5)
         GPIO.output(11, False)
         self.pwm1.ChangeDutyCycle(0)
 

@@ -20,12 +20,14 @@ class ExoskeletonControl():
             sleep(1)
             GPIO.output(11, False)
             self.pwm1.ChangeDutyCycle(0)
+            print("moved 1 to"+str(angle))
         if servo == 1:
             GPIO.output(13, True)
             self.pwm2.ChangeDutyCycle(duty)
             sleep(1)
             GPIO.output(13, False)
             self.pwm2.ChangeDutyCycle(0)
+            print("moved 2 to"+str(angle))
         else:
             print("select a servo to change duty cycle")
 

@@ -1,4 +1,4 @@
-from exoskeleton_control.servo_control import ExoskeletonControl, GPIO
+from servo_control import ExoskeletonControl, GPIO
 from time import sleep
 sc = ExoskeletonControl()
 angles = [90,0,90,180]

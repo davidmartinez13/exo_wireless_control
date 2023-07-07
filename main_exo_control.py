@@ -1,4 +1,4 @@
-from exoskeleton_control.servo_control import ExoskeletonControl, GPIO
+from servo_control import ExoskeletonControl, GPIO
 import numpy as np
 import flask
 from flask import Flask,render_template,Response,request

@@ -1,7 +1,7 @@
 import requests
 
 #replace url according to raspberry ip:
-url_detections = 'http://192.168.163.205:5000/detections'
+url_detections = 'http://192.168.1.137:5000/detections'
 
 while True:
     angle = input('set angle to 0 or 180\n')

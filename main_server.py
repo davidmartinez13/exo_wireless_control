@@ -7,7 +7,7 @@ while True:
     angle1 = input('set angle1 to 0 or 180\n')
     angle2 = input('set angle2 to 0 or 180\n')
     data = {"move_command": [True],
-            "angle": [int(180-angle1),int(angle2)]
+            "angle": [180-int(angle1),int(angle2)]
             }
 
     try:

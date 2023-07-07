@@ -23,7 +23,7 @@ class ExoskeletonControl():
         GPIO.output(13, True)
         self.pwm1.ChangeDutyCycle(duty1)
         self.pwm2.ChangeDutyCycle(duty2)
-        sleep(0.5)
+        sleep(1)
         GPIO.output(11, False)
         GPIO.output(13, False)
         self.pwm1.ChangeDutyCycle(0)

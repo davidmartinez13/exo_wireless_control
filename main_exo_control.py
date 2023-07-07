@@ -26,7 +26,7 @@ def move_exoskeleton(ec):
         if move_command and move_command[0]==True and done == True:
             if 0 <= angle[0] <= 180:
                 done = False
-                ec.SetAngle(angle[0])
+                ec.SetAngle(angle[0], angle[1])
                 #sleep(1.5)
                 request_data = {"move_command": [],
                                   "angle": []

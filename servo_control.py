@@ -6,20 +6,29 @@ class ExoskeletonControl():
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(11,GPIO.OUT)
         GPIO.setup(13,GPIO.OUT)
-        self.pwm = GPIO.PWM(11,50)
-        self.pwm.start(0)
+        self.pwm1 = GPIO.PWM(11,50)
+        self.pwm2 = GPIO.PWM(13,50)
+        self.pwm1.start(0)
+        self.pwm2.start(0)
         
-    def SetAngle(self,angle):
-        self.give_feedback()
-        duty = angle / 18 + 2
+    def SetAngle(self,angle1,angle2):
+        # self.give_feedback()
+        duty1 = angle1 / 18 + 2
         GPIO.output(11, True)
-        self.pwm.ChangeDutyCycle(duty)
+        self.pwm1.ChangeDutyCycle(duty1)
         sleep(1)
         GPIO.output(11, False)
-        self.pwm.ChangeDutyCycle(0)
+        self.pwm1.ChangeDutyCycle(0)
 
-    def give_feedback(self):
+        duty2 = angle2 / 18 + 2
         GPIO.output(13, True)
-        sleep(0.5)
+        self.pwm2.ChangeDutyCycle(duty2)
+        sleep(1)
         GPIO.output(13, False)
+        self.pwm2.ChangeDutyCycle(0)
+
+    # def give_feedback(self):
+    #     GPIO.output(13, True)
+    #     sleep(0.5)
+    #     GPIO.output(13, False)
 

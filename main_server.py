@@ -4,9 +4,10 @@ import requests
 url_detections = 'http://192.168.1.137:5000/detections'
 
 while True:
-    angle = input('set angle to 0 or 180\n')
+    angle1 = input('set angle1 to 0 or 180\n')
+    angle2 = input('set angle2 to 0 or 180\n')
     data = {"move_command": [True],
-            "angle": [int(angle)]
+            "angle": [int(angle1),int(angle2)]
             }
 
     try:
